@@ -1,4 +1,4 @@
-
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +39,7 @@ body {
   padding: 0 20px;
 }
 
+/* Navigation */
 .navbar {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   padding: 1rem 0;
@@ -92,6 +93,8 @@ body {
   letter-spacing: -0.5px;
 }
 
+
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   color: white;
@@ -158,6 +161,7 @@ body {
   background-color: var(--light-green);
 }
 
+/* Problem Section */
 .problem {
   padding: 80px 20px;
   background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
@@ -191,6 +195,7 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* What Is Section */
 .what-is {
   padding: 80px 20px;
   background-color: var(--bg-section);
@@ -251,6 +256,7 @@ body {
   font-weight: 500;
 }
 
+/* Features/Highlights Section */
 .features-highlights {
   padding: 80px 20px;
   background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
@@ -316,185 +322,6 @@ body {
   margin: 0;
 }
 
-.visual {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.visual h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.visual-intro {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.visual-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.visual-mockup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mockup-screen {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 60px rgba(45, 134, 89, 0.4);
-  max-width: 500px;
-  width: 100%;
-}
-
-.mockup-header {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 1rem;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0;
-}
-
-.mockup-dots {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.mockup-dots span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.mockup-title {
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-  flex: 1;
-  text-align: center;
-}
-
-.mockup-body {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0 0 10px 10px;
-  min-height: 300px;
-}
-
-.mockup-chart {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  gap: 1rem;
-  height: 150px;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: linear-gradient(180deg, var(--mint-green) 0%, var(--light-green) 100%);
-  border-radius: 8px;
-  border: 2px solid var(--accent-green);
-}
-
-.chart-bar {
-  flex: 1;
-  background: linear-gradient(180deg, var(--primary-green), var(--accent-green));
-  border-radius: 4px 4px 0 0;
-  min-height: 30px;
-  transition: all 0.3s ease;
-}
-
-.chart-bar:hover {
-  opacity: 0.8;
-  transform: scaleY(1.1);
-}
-
-.mockup-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1rem;
-  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
-  border-radius: 8px;
-  border: 2px solid var(--accent-green);
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  margin-bottom: 0.5rem;
-}
-
-.stat-value {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary-green);
-}
-
-.visual-description {
-  padding: 2rem;
-}
-
-.visual-description h3 {
-  color: var(--primary-green);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.visual-description p {
-  color: var(--text-medium);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.visual-features {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.visual-features li {
-  padding: 0.75rem 0;
-  color: var(--text-dark);
-  font-size: 1.05rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.visual-features li:last-child {
-  border-bottom: none;
-}
-
-.visual-note {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 5px solid var(--primary-green);
-  font-style: italic;
-  margin-top: 1.5rem;
-  border: 2px solid var(--accent-green);
-  box-shadow: var(--shadow);
-  font-weight: 500;
-}
 
 /* Why Need Section */
 .why-need {
@@ -1069,10 +896,6 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
-  .visual-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
 
 
   .problem h2,
@@ -1124,13 +947,11 @@ footer a:hover {
   .why-different,
   .how-start,
   .future,
-  .features-highlights,
-  .visual {
+  .features-highlights {
     padding: 50px 20px;
   }
 
-  .features-highlights h2,
-  .visual h2 {
+  .features-highlights h2 {
     font-size: 2rem;
   }
 
@@ -1240,67 +1061,6 @@ body.dark .feature-card h3 {
 
 body.dark .feature-card p {
   color: #d0d0d0;
-}
-
-body.dark .visual {
-  background-color: #1f1f1f;
-}
-
-body.dark .visual h2 {
-  color: #a0a0a0;
-}
-
-body.dark .visual-intro {
-  color: #c0c0c0;
-}
-
-body.dark .mockup-screen {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-}
-
-body.dark .mockup-body {
-  background-color: #2a2a2a;
-}
-
-body.dark .mockup-chart {
-  background: linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-}
-
-body.dark .chart-bar {
-  background: linear-gradient(180deg, #5a5a5a, #4a4a4a);
-}
-
-body.dark .stat-item {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-}
-
-body.dark .stat-label {
-  color: #b0b0b0;
-}
-
-body.dark .stat-value {
-  color: #d0d0d0;
-}
-
-body.dark .visual-description h3 {
-  color: #a0a0a0;
-}
-
-body.dark .visual-description p {
-  color: #c0c0c0;
-}
-
-body.dark .visual-features li {
-  color: #e0e0e0;
-  border-bottom-color: #4a4a4a;
-}
-
-body.dark .visual-note {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
 }
 
 body.dark .why-need {
