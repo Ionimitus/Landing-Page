@@ -28,7 +28,7 @@ body {
   font-size: 16px;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 100px; margin: 0 auto; padding: 0 20px; }
 
 .navbar {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
@@ -348,37 +348,98 @@ footer a:hover { color: white; text-decoration: underline; }
   .cta-final { padding: 60px 20px; }
 }
 
-body.dark { background-color: #1a1a1a; color: #e0e0e0; }
-body.dark .navbar { background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
-body.dark .theme-toggle { border-color: rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.1); }
-body.dark .theme-toggle:hover { background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); }
-body.dark .logo { color: #e0e0e0; }
-body.dark .hero { background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); }
-body.dark .problem { background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); }
-body.dark .problem h2, body.dark .what-is h2, body.dark .why-need h2, body.dark .how-works h2, body.dark .benefits h2, body.dark .who-can-use h2, body.dark .why-different h2, body.dark .how-start h2, body.dark .future h2, body.dark .features-highlights h2 { color: #a0a0a0; }
+body.dark { 
+  background-color: #1a1a1a; color: #e0e0e0; 
+}
+body.dark .navbar { 
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+}
+body.dark .theme-toggle { 
+  border-color: rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.1); 
+}
+body.dark .theme-toggle:hover { 
+  background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); 
+}
+body.dark .logo { 
+  color: #e0e0e0; 
+}
+body.dark .hero { 
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); 
+}
+body.dark .problem { 
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); 
+}
+body.dark .problem h2, body.dark .what-is h2, body.dark .why-need h2, body.dark .how-works h2, body.dark .benefits h2, 
+body.dark .who-can-use h2, body.dark .why-different h2, body.dark .how-start h2, body.dark .future h2, body.dark .features-highlights h2 { 
+  color: #a0a0a0; 
+}
 body.dark .problem p, body.dark .what-is p, body.dark .why-need > p, body.dark .how-works .intro, body.dark .benefits > p, body.dark .who-can-use > p, body.dark .why-different > p, body.dark .how-start > p, body.dark .future > p, body.dark .section-intro { color: #c0c0c0; }
-body.dark .problem .highlight { background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); color: #e0e0e0; border-left-color: #6a6a6a; }
-body.dark .what-is, body.dark .benefits, body.dark .who-can-use, body.dark .how-start, body.dark .future { background-color: #1f1f1f; }
-body.dark .feature-list li, body.dark .future-features li { background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%); color: #e0e0e0; border-left-color: #6a6a6a; }
-body.dark .assistant-note, body.dark .solution-note, body.dark .closing-note, body.dark .timeline, body.dark .future-closing { background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #6a6a6a; color: #e0e0e0; }
-body.dark .features-highlights { background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); }
-body.dark .feature-card { background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; }
-body.dark .feature-card:hover { background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%); border-color: #6a6a6a; }
-body.dark .feature-card h3 { color: #b0b0b0; }
-body.dark .feature-card p { color: #d0d0d0; }
-body.dark .why-need { background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); }
-body.dark .problem-card, body.dark .different-item { background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; }
-body.dark .problem-card h3, body.dark .different-item h3 { color: #b0b0b0; }
-body.dark .problem-card p, body.dark .different-item p { color: #d0d0d0; }
-body.dark .how-works { background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); }
-body.dark .step h3 { color: #b0b0b0; }
-body.dark .step p { color: #d0d0d0; }
-body.dark .step-number { background: linear-gradient(135deg, #5a5a5a, #4a4a4a); }
-body.dark .benefit-item { background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; }
-body.dark .benefit-item h3 { color: #b0b0b0; }
-body.dark .benefit-item p { color: #d0d0d0; }
-body.dark .checkmark { background-color: #6a6a6a; }
-body.dark .user-list li { background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%); border-left-color: #6a6a6a; color: #e0e0e0; }
+body.dark .problem .highlight { 
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); color: #e0e0e0; border-left-color: #6a6a6a; 
+}
+body.dark .what-is, body.dark .benefits, body.dark .who-can-use, body.dark .how-start, body.dark .future { 
+  background-color: #1f1f1f; 
+}
+body.dark .feature-list li, body.dark .future-features li { 
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%); color: #e0e0e0; border-left-color: #6a6a6a; 
+}
+body.dark .assistant-note, body.dark .solution-note, body.dark .closing-note, body.dark .timeline, body.dark .future-closing { 
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #6a6a6a; color: #e0e0e0; 
+}
+body.dark .features-highlights { 
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); 
+}
+body.dark .feature-card { 
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; 
+}
+body.dark .feature-card:hover { 
+  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%); border-color: #6a6a6a; 
+}
+body.dark .feature-card h3 { 
+  color: #b0b0b0; 
+}
+body.dark .feature-card p { 
+  color: #d0d0d0; 
+}
+body.dark .why-need { 
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); 
+}
+body.dark .problem-card, body.dark .different-item { 
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; 
+}
+body.dark .problem-card h3, body.dark .different-item h3 { 
+  color: #b0b0b0; 
+}
+body.dark .problem-card p, body.dark .different-item p { 
+  color: #d0d0d0; 
+}
+body.dark .how-works { 
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); 
+}
+body.dark .step h3 { 
+  color: #b0b0b0; 
+}
+body.dark .step p { 
+  color: #d0d0d0; 
+}
+body.dark .step-number { 
+  background: linear-gradient(135deg, #5a5a5a, #4a4a4a); 
+}
+body.dark .benefit-item { 
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; 
+}
+body.dark .benefit-item h3 { 
+  color: #b0b0b0; 
+}
+body.dark .benefit-item p { 
+  color: #d0d0d0; 
+}
+body.dark .checkmark { 
+  background-color: #6a6a6a; 
+}
+body.dark .user-list li { 
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%); border-left-color: #6a6a6a; color: #e0e0e0; 
+}
 body.dark .why-different { background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%); }
 body.dark .start-step { background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%); border-color: #5a5a5a; color: #e0e0e0; }
 body.dark .start-step:hover { background: linear-gradient(90deg, #4a4a4a 0%, #3a3a3a 100%); border-color: #6a6a6a; }
