@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +39,6 @@ body {
   padding: 0 20px;
 }
 
-/* Navigation */
 .navbar {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   padding: 1rem 0;
@@ -93,8 +92,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-
-/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   color: white;
@@ -161,7 +158,6 @@ body {
   background-color: var(--light-green);
 }
 
-/* Problem Section */
 .problem {
   padding: 80px 20px;
   background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
@@ -195,7 +191,6 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* What Is Section */
 .what-is {
   padding: 80px 20px;
   background-color: var(--bg-section);
@@ -256,7 +251,6 @@ body {
   font-weight: 500;
 }
 
-/* Features/Highlights Section */
 .features-highlights {
   padding: 80px 20px;
   background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
@@ -322,7 +316,6 @@ body {
   margin: 0;
 }
 
-/* Visual Element Section */
 .visual {
   padding: 80px 20px;
   background-color: var(--bg-section);
