@@ -1,1728 +1,405 @@
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-green: #2d8659;
-  --primary-green-dark: #1f5d3f;
-  --primary-green-light: #3da372;
-  --secondary-green: #4a9d6e;
-  --accent-green: #6bc48a;
-  --bright-green: #22c55e;
-  --forest-green: #166534;
-  --mint-green: #d1fae5;
-  --light-green: #e8f5e9;
-  --pale-green: #f0fdf4;
-  --text-dark: #1a1a1a;
-  --text-medium: #2d4a2d;
-  --text-light: #4a6a4a;
-  --bg-white: #ffffff;
-  --bg-light: #f0fdf4;
-  --bg-section: #e8f5e9;
-  --border-color: #a7d4a7;
-  --shadow: 0 2px 8px rgba(45, 134, 89, 0.15);
-  --shadow-hover: 0 4px 16px rgba(45, 134, 89, 0.3);
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
-  color: var(--text-dark);
-  background-color: var(--bg-white);
-  font-size: 16px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Navigation */
-.navbar {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  padding: 1rem 0;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.theme-toggle {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: scale(1.1);
-}
-
-.theme-toggle span {
-  display: block;
-  line-height: 1;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  letter-spacing: -0.5px;
-}
-
-.cta-nav {
-  padding: 10px 24px;
-  font-size: 0.95rem;
-  background-color: white;
-  color: var(--primary-green);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cta-nav:hover {
-  background-color: var(--mint-green);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-  opacity: 0.3;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -1px;
-}
-
-.tagline {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  opacity: 0.95;
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  opacity: 0.9;
-  line-height: 1.8;
-}
-
-.cta {
-  padding: 16px 40px;
-  font-size: 1.1rem;
-  background-color: white;
-  color: var(--primary-green);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  background-color: var(--light-green);
-}
-
-/* Problem Section */
-.problem {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
-}
-
-.problem h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.problem p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.8;
-  font-weight: 500;
-}
-
-.problem .highlight {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 2rem;
-  border-left: 5px solid var(--primary-green);
-  border-radius: 8px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--forest-green);
-  margin-top: 2rem;
-  box-shadow: var(--shadow);
-}
-
-/* What Is Section */
-.what-is {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.what-is h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.what-is p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.8;
-}
-
-.feature-list {
-  max-width: 900px;
-  margin: 2rem auto;
-  list-style: none;
-  padding: 0;
-}
-
-.feature-list li {
-  padding: 1rem 1.5rem;
-  margin-bottom: 0.75rem;
-  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
-  border-left: 5px solid var(--primary-green);
-  border-radius: 8px;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-  position: relative;
-  padding-left: 2.5rem;
-  box-shadow: var(--shadow);
-  font-weight: 500;
-}
-
-.feature-list li::before {
-  content: '→';
-  position: absolute;
-  left: 1rem;
-  color: var(--primary-green);
-  font-weight: bold;
-}
-
-.assistant-note {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 1.5rem;
-  border-radius: 8px;
-  font-style: italic;
-  margin-top: 2rem;
-  border: 2px solid var(--accent-green);
-  box-shadow: var(--shadow);
-  font-weight: 500;
-}
-
-/* Features/Highlights Section */
-.features-highlights {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
-}
-
-.features-highlights h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.section-intro {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.feature-card {
-  background-color: white;
-  padding: 2.5rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 3px solid var(--accent-green);
-  box-shadow: var(--shadow);
-}
-
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--primary-green);
-  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
-}
-
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.feature-card h3 {
-  color: var(--primary-green);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.feature-card p {
-  color: var(--text-medium);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* Visual Element Section */
-.visual {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.visual h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.visual-intro {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.visual-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.visual-mockup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mockup-screen {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 60px rgba(45, 134, 89, 0.4);
-  max-width: 500px;
-  width: 100%;
-}
-
-.mockup-header {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 1rem;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0;
-}
-
-.mockup-dots {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.mockup-dots span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.mockup-title {
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-  flex: 1;
-  text-align: center;
-}
-
-.mockup-body {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0 0 10px 10px;
-  min-height: 300px;
-}
-
-.mockup-chart {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  gap: 1rem;
-  height: 150px;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: linear-gradient(180deg, var(--mint-green) 0%, var(--light-green) 100%);
-  border-radius: 8px;
-  border: 2px solid var(--accent-green);
-}
-
-.chart-bar {
-  flex: 1;
-  background: linear-gradient(180deg, var(--primary-green), var(--accent-green));
-  border-radius: 4px 4px 0 0;
-  min-height: 30px;
-  transition: all 0.3s ease;
-}
-
-.chart-bar:hover {
-  opacity: 0.8;
-  transform: scaleY(1.1);
-}
-
-.mockup-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1rem;
-  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
-  border-radius: 8px;
-  border: 2px solid var(--accent-green);
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  margin-bottom: 0.5rem;
-}
-
-.stat-value {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary-green);
-}
-
-.visual-description {
-  padding: 2rem;
-}
-
-.visual-description h3 {
-  color: var(--primary-green);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.visual-description p {
-  color: var(--text-medium);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.visual-features {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.visual-features li {
-  padding: 0.75rem 0;
-  color: var(--text-dark);
-  font-size: 1.05rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.visual-features li:last-child {
-  border-bottom: none;
-}
-
-.visual-note {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 5px solid var(--primary-green);
-  font-style: italic;
-  margin-top: 1.5rem;
-  border: 2px solid var(--accent-green);
-  box-shadow: var(--shadow);
-  font-weight: 500;
-}
-
-/* Why Need Section */
-.why-need {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.why-need h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.why-need > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.problems-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.problem-card {
-  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border-top: 5px solid var(--primary-green);
-  border: 3px solid var(--accent-green);
-}
-
-.problem-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.problem-card h3 {
-  color: var(--primary-green);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.problem-card p {
-  color: var(--text-medium);
-  line-height: 1.7;
-  margin: 0;
-}
-
-.solution-note {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--forest-green);
-  margin-top: 3rem;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid var(--primary-green);
-  box-shadow: var(--shadow-hover);
-}
-
-/* How Works Section */
-.how-works {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
-}
-
-.how-works h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.how-works .intro {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-
-.step {
-  text-align: center;
-  position: relative;
-}
-
-.step-number {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0 auto 1.5rem;
-  box-shadow: var(--shadow);
-}
-
-.step h3 {
-  color: var(--primary-green);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.step p {
-  color: var(--text-medium);
-  line-height: 1.7;
-}
-
-/* Benefits Section */
-.benefits {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.benefits h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.benefits > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.benefit-item {
-  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  transition: all 0.3s ease;
-  border: 2px solid var(--accent-green);
-}
-
-.benefit-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.checkmark {
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent-green);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-.benefit-item h3 {
-  color: var(--primary-green);
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.benefit-item p {
-  color: var(--text-medium);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* Who Can Use Section */
-.who-can-use {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.who-can-use h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.who-can-use > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.user-list {
-  max-width: 800px;
-  margin: 2rem auto;
-  list-style: none;
-  padding: 0;
-}
-
-.user-list li {
-  padding: 1.25rem 2rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
-  border-left: 5px solid var(--primary-green);
-  border-radius: 8px;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-  position: relative;
-  padding-left: 3rem;
-  box-shadow: var(--shadow);
-}
-
-.user-list li::before {
-  content: '🌱';
-  position: absolute;
-  left: 1.25rem;
-  font-size: 1.2rem;
-}
-
-.closing-note {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--forest-green);
-  margin-top: 3rem;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid var(--primary-green);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Why Different Section */
-.why-different {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
-}
-
-.why-different h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.why-different > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.8;
-}
-
-.different-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.different-item {
-  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: all 0.3s ease;
-  border-top: 5px solid var(--primary-green);
-  border: 3px solid var(--accent-green);
-}
-
-.different-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.different-item h3 {
-  color: var(--primary-green);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.different-item p {
-  color: var(--text-medium);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* How Start Section */
-.how-start {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.how-start h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.how-start > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.start-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto 3rem;
-}
-
-.start-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  border: 2px solid var(--accent-green);
-  box-shadow: var(--shadow);
-}
-
-.start-step:hover {
-  background: linear-gradient(90deg, var(--accent-green) 0%, var(--mint-green) 100%);
-  transform: translateX(5px);
-  border-color: var(--primary-green);
-}
-
-.start-number {
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-green);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.start-step p {
-  color: var(--text-dark);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0;
-  padding-top: 0.75rem;
-}
-
-.timeline {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--forest-green);
-  text-align: center;
-  max-width: 900px;
-  margin: 3rem auto 0;
-  border: 3px solid var(--primary-green);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Future Section */
-.future {
-  padding: 80px 20px;
-  background-color: var(--bg-section);
-}
-
-.future h2 {
-  font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.future > p {
-  font-size: 1.1rem;
-  color: var(--text-medium);
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.8;
-}
-
-.future-benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto 3rem;
-  max-width: 900px;
-}
-
-.future-item {
-  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-  color: var(--forest-green);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border: 2px solid var(--accent-green);
-}
-
-.future-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.future-features {
-  max-width: 800px;
-  margin: 2rem auto;
-  list-style: none;
-  padding: 0;
-}
-
-.future-features li {
-  padding: 1rem 1.5rem;
-  margin-bottom: 0.75rem;
-  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
-  border-left: 5px solid var(--primary-green);
-  border-radius: 8px;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-  position: relative;
-  padding-left: 2.5rem;
-  box-shadow: var(--shadow);
-  font-weight: 500;
-}
-
-.future-features li::before {
-  content: '✨';
-  position: absolute;
-  left: 1rem;
-  font-size: 1.2rem;
-}
-
-.future-closing {
-  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
-  padding: 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--forest-green);
-  margin-top: 3rem;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid var(--primary-green);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Final CTA Section */
-.cta-final {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-  color: white;
-  text-align: center;
-}
-
-.cta-final h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.cta-final p {
-  font-size: 1.15rem;
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.8;
-  opacity: 0.95;
-}
-
-.cta-final .cta {
-  margin-top: 2rem;
-  background-color: white;
-  color: var(--primary-green);
-  padding: 18px 50px;
-  font-size: 1.2rem;
-}
-
-.cta-final .cta:hover {
-  background-color: var(--light-green);
-}
-
-/* Footer */
-footer {
-  background: linear-gradient(135deg, var(--forest-green) 0%, var(--primary-green-dark) 100%);
-  color: white;
-  padding: 4rem 20px 2rem;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-section h3 {
-  color: var(--accent-green);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.footer-section h4 {
-  color: white;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.footer-section p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.social-media {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  color: white;
-}
-
-.social-icon:hover {
-  background-color: var(--accent-green);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(107, 196, 138, 0.5);
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.footer-links a:hover {
-  color: var(--accent-green);
-  transform: translateX(5px);
-}
-
-.footer-contact {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-contact li {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1rem;
-  line-height: 1.8;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.footer-legal {
-  display: flex;
-  gap: 2rem;
-}
-
-.footer-legal a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.footer-legal a:hover {
-  color: var(--accent-green);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .problems-grid,
-  .benefits-grid,
-  .different-grid,
-  .steps,
-  .start-steps,
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .visual-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .problem h2,
-  .what-is h2,
-  .why-need h2,
-  .how-works h2,
-  .benefits h2,
-  .who-can-use h2,
-  .why-different h2,
-  .how-start h2,
-  .future h2,
-  .cta-final h2 {
-    font-size: 2rem;
-  }
-
-  .navbar .container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .cta-nav {
-    width: 100%;
-  }
-
-  .future-benefits {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .tagline {
-    font-size: 1.1rem;
-  }
-
-  .problem,
-  .what-is,
-  .why-need,
-  .how-works,
-  .benefits,
-  .who-can-use,
-  .why-different,
-  .how-start,
-  .future,
-  .features-highlights,
-  .visual {
-    padding: 50px 20px;
-  }
-
-  .features-highlights h2,
-  .visual h2 {
-    font-size: 2rem;
-  }
-
-  .cta-final {
-    padding: 60px 20px;
-  }
-}
-
-/* Dark Mode Styles */
-body.dark {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-}
-
-body.dark .navbar {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-body.dark .theme-toggle {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-body.dark .logo {
-  color: #e0e0e0;
-}
-
-body.dark .cta-nav {
-  background-color: #4a4a4a;
-  color: #e0e0e0;
-}
-
-body.dark .cta-nav:hover {
-  background-color: #5a5a5a;
-}
-
-body.dark .hero {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-}
-
-body.dark .problem {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-}
-
-body.dark .problem h2 {
-  color: #a0a0a0;
-}
-
-body.dark .problem p {
-  color: #c0c0c0;
-}
-
-body.dark .problem .highlight {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  color: #e0e0e0;
-  border-left-color: #6a6a6a;
-}
-
-body.dark .what-is {
-  background-color: #1f1f1f;
-}
-
-body.dark .what-is h2 {
-  color: #a0a0a0;
-}
-
-body.dark .what-is p {
-  color: #c0c0c0;
-}
-
-body.dark .feature-list li {
-  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
-  color: #e0e0e0;
-  border-left-color: #6a6a6a;
-}
-
-body.dark .assistant-note {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .features-highlights {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-}
-
-body.dark .features-highlights h2 {
-  color: #a0a0a0;
-}
-
-body.dark .section-intro {
-  color: #c0c0c0;
-}
-
-body.dark .feature-card {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
-body.dark .feature-card:hover {
-  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
-  border-color: #6a6a6a;
-}
-
-body.dark .feature-card h3 {
-  color: #b0b0b0;
-}
-
-body.dark .feature-card p {
-  color: #d0d0d0;
-}
-
-body.dark .visual {
-  background-color: #1f1f1f;
-}
-
-body.dark .visual h2 {
-  color: #a0a0a0;
-}
-
-body.dark .visual-intro {
-  color: #c0c0c0;
-}
-
-body.dark .mockup-screen {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-}
-
-body.dark .mockup-body {
-  background-color: #2a2a2a;
-}
-
-body.dark .mockup-chart {
-  background: linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-}
-
-body.dark .chart-bar {
-  background: linear-gradient(180deg, #5a5a5a, #4a4a4a);
-}
-
-body.dark .stat-item {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-}
-
-body.dark .stat-label {
-  color: #b0b0b0;
-}
-
-body.dark .stat-value {
-  color: #d0d0d0;
-}
-
-body.dark .visual-description h3 {
-  color: #a0a0a0;
-}
-
-body.dark .visual-description p {
-  color: #c0c0c0;
-}
-
-body.dark .visual-features li {
-  color: #e0e0e0;
-  border-bottom-color: #4a4a4a;
-}
-
-body.dark .visual-note {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .why-need {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-}
-
-body.dark .why-need h2 {
-  color: #a0a0a0;
-}
-
-body.dark .why-need > p {
-  color: #c0c0c0;
-}
-
-body.dark .problem-card {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
-body.dark .problem-card h3 {
-  color: #b0b0b0;
-}
-
-body.dark .problem-card p {
-  color: #d0d0d0;
-}
-
-body.dark .solution-note {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .how-works {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-}
-
-body.dark .how-works h2 {
-  color: #a0a0a0;
-}
-
-body.dark .how-works .intro {
-  color: #c0c0c0;
-}
-
-body.dark .step h3 {
-  color: #b0b0b0;
-}
-
-body.dark .step p {
-  color: #d0d0d0;
-}
-
-body.dark .step-number {
-  background: linear-gradient(135deg, #5a5a5a, #4a4a4a);
-}
-
-body.dark .benefits {
-  background-color: #1f1f1f;
-}
-
-body.dark .benefits h2 {
-  color: #a0a0a0;
-}
-
-body.dark .benefits > p {
-  color: #c0c0c0;
-}
-
-body.dark .benefit-item {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
-body.dark .benefit-item h3 {
-  color: #b0b0b0;
-}
-
-body.dark .benefit-item p {
-  color: #d0d0d0;
-}
-
-body.dark .checkmark {
-  background-color: #6a6a6a;
-}
-
-body.dark .who-can-use {
-  background-color: #1f1f1f;
-}
-
-body.dark .who-can-use h2 {
-  color: #a0a0a0;
-}
-
-body.dark .who-can-use > p {
-  color: #c0c0c0;
-}
-
-body.dark .user-list li {
-  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-left-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .closing-note {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .why-different {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-}
-
-body.dark .why-different h2 {
-  color: #a0a0a0;
-}
-
-body.dark .why-different > p {
-  color: #c0c0c0;
-}
-
-body.dark .different-item {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
-body.dark .different-item h3 {
-  color: #b0b0b0;
-}
-
-body.dark .different-item p {
-  color: #d0d0d0;
-}
-
-body.dark .how-start {
-  background-color: #1f1f1f;
-}
-
-body.dark .how-start h2 {
-  color: #a0a0a0;
-}
-
-body.dark .how-start > p {
-  color: #c0c0c0;
-}
-
-body.dark .start-step {
-  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
-body.dark .start-step:hover {
-  background: linear-gradient(90deg, #4a4a4a 0%, #3a3a3a 100%);
-  border-color: #6a6a6a;
-}
-
-body.dark .start-step p {
-  color: #e0e0e0;
-}
-
-body.dark .start-number {
-  background-color: #5a5a5a;
-}
-
-body.dark .timeline {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .future {
-  background-color: #1f1f1f;
-}
-
-body.dark .future h2 {
-  color: #a0a0a0;
-}
-
-body.dark .future > p {
-  color: #c0c0c0;
-}
-
-body.dark .future-item {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #5a5a5a;
-  color: #d0d0d0;
-}
-
-body.dark .future-features li {
-  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-left-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .future-closing {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
-  border-color: #6a6a6a;
-  color: #e0e0e0;
-}
-
-body.dark .cta-final {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-}
-
-body.dark .cta-final .cta {
-  background-color: #4a4a4a;
-  color: #e0e0e0;
-}
-
-body.dark .cta-final .cta:hover {
-  background-color: #5a5a5a;
-}
-
-body.dark footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-}
-
-body.dark .footer-section h3 {
-  color: #b0b0b0;
-}
-
-body.dark .footer-section h4 {
-  color: #d0d0d0;
-}
-
-body.dark .footer-section p {
-  color: #c0c0c0;
-}
-
-body.dark .footer-links a {
-  color: #c0c0c0;
-}
-
-body.dark .footer-links a:hover {
-  color: #e0e0e0;
-}
-
-body.dark .footer-contact li {
-  color: #c0c0c0;
-}
-
-body.dark .footer-bottom p {
-  color: #c0c0c0;
-}
-
-body.dark .footer-legal a {
-  color: #c0c0c0;
-}
-
-body.dark .footer-legal a:hover {
-  color: #e0e0e0;
-}
-
-body.dark .social-icon {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark .social-icon:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>GreenSense - Smart Insights for Small Greenhouse Farmers</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">GreenSense</div>
+      <div class="nav-buttons">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span>🌙</span>
+        </button>
+        <button class="cta-nav">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>GreenSense</h1>
+      <p class="tagline">Smart Insights for Small Greenhouse Farmers</p>
+      <p class="hero-description">Turn everyday transactions into valuable insights. Make smart decisions, reduce waste, and increase profits—without complicated spreadsheets or expensive equipment.</p>
+      <button class="cta">Get Started Free</button>
+    </div>
+  </header>
+
+  <!-- Problem Statement -->
+  <section class="problem">
+    <div class="container">
+      <h2>Farming is a Tough Business</h2>
+      <p>Even small-scale greenhouse farmers, who grow vegetables, herbs, or mushrooms in controlled environments, face many challenges. Crops are sensitive, resources are limited, and profit margins are tight. One mistake—buying too much fertilizer, overwatering, or planting too many crops—can mean wasted time, wasted money, and wasted harvest.</p>
+      <p class="highlight">What if there was a simple way to make smart decisions, reduce waste, and increase profits—without complicated spreadsheets, heavy accounting, or expensive equipment? That's where GreenSense comes in.</p>
+    </div>
+  </section>
+
+  <!-- Features/Highlights Section -->
+  <section class="features-highlights">
+    <div class="container">
+      <h2>Key Features & Highlights</h2>
+      <p class="section-intro">GreenSense provides powerful tools to help you manage your greenhouse farm more effectively:</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Transaction Tracking</h3>
+          <p>Easily log all purchases and sales through mobile or web. Track seeds, fertilizers, soil, and crop sales in one place.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI-Powered Insights</h3>
+          <p>Automatic analysis of your data to calculate profit per crop, cost per plant, and identify seasonal trends.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Smart Alerts</h3>
+          <p>Get notified when crops aren't performing well, costs spike, or profitable opportunities arise.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Visual Reports</h3>
+          <p>Simple charts and summaries that show farm performance at a glance—no complex formulas needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Profit Analysis</h3>
+          <p>Identify which crops are most profitable and which customers or markets generate the best returns.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Mobile & Web Access</h3>
+          <p>Access your farm data anywhere, anytime. Works on phones, tablets, and computers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Element Section -->
+  <section class="visual">
+    <div class="container">
+      <h2>See GreenSense in Action</h2>
+      <p class="visual-intro">Get a glimpse of how GreenSense transforms your farm management:</p>
+      <div class="visual-content">
+        <div class="visual-mockup">
+          <div class="mockup-screen">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mockup-title">GreenSense Dashboard</div>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-chart">
+                <div class="chart-bar" style="height: 60%"></div>
+                <div class="chart-bar" style="height: 85%"></div>
+                <div class="chart-bar" style="height: 45%"></div>
+                <div class="chart-bar" style="height: 90%"></div>
+                <div class="chart-bar" style="height: 70%"></div>
+              </div>
+              <div class="mockup-stats">
+                <div class="stat-item">
+                  <div class="stat-label">Top Crop</div>
+                  <div class="stat-value">Tomatoes</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Profit Margin</div>
+                  <div class="stat-value">+32%</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">This Month</div>
+                  <div class="stat-value">$2,450</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-description">
+          <h3>Real-Time Farm Analytics</h3>
+          <p>GreenSense provides a comprehensive dashboard that shows:</p>
+          <ul class="visual-features">
+            <li>📊 Crop performance metrics and profitability analysis</li>
+            <li>💵 Real-time profit tracking and cost breakdowns</li>
+            <li>📅 Seasonal trends and planting recommendations</li>
+            <li>🎯 Actionable insights tailored to your farm</li>
+          </ul>
+          <p class="visual-note">All data is automatically analyzed and presented in easy-to-understand visualizations, so you can make informed decisions quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is GreenSense -->
+  <section class="what-is">
+    <div class="container">
+      <h2>What Is GreenSense?</h2>
+      <p>GreenSense is a smart platform designed to help small greenhouse farmers turn everyday transactions into valuable insights. Every time a farmer buys seeds, fertilizers, or soil, or sells crops to a local market, restaurant, or subscription box, GreenSense collects and analyzes the information.</p>
+      <p>But it's not just about recording sales and expenses. GreenSense uses intelligent analysis to answer questions like:</p>
+      <ul class="feature-list">
+        <li>Which crops are making the most money?</li>
+        <li>Where am I spending too much?</li>
+        <li>How much should I plant next season?</li>
+        <li>Which customers or markets are the most profitable?</li>
+      </ul>
+      <p class="assistant-note">GreenSense acts like a personal assistant for your farm—one that is awake 24/7, watching over your crops, your expenses, and your sales, and giving you easy-to-understand advice.</p>
+    </div>
+  </section>
+
+  <!-- Why Farmers Need GreenSense -->
+  <section class="why-need">
+    <div class="container">
+      <h2>Why Farmers Need GreenSense</h2>
+      <p>Small greenhouse farmers face common problems:</p>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <h3>Financial Blind Spots</h3>
+          <p>Many small farmers don't know the real cost of producing each crop. Seeds, soil, fertilizer, water, and labor all add up, but without a clear picture, farmers may not realize which crops are actually profitable.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Wasted Produce</h3>
+          <p>When farmers don't have insight into which crops sell best, they risk overplanting. Unsold or spoiled crops mean lost money.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Cash Flow Challenges</h3>
+          <p>Sometimes buyers take longer to pay, or suppliers' prices change unexpectedly. Farmers need to know which customers or suppliers are reliable.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Planning Difficulties</h3>
+          <p>Knowing how much to plant next season or how to adjust crop selection based on demand can be tricky without good data.</p>
+        </div>
+      </div>
+      <p class="solution-note">GreenSense helps solve all of these problems. It gives farmers the tools they need to make smart decisions, reduce waste, and grow more profitably.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-works">
+    <div class="container">
+      <h2>How GreenSense Works</h2>
+      <p class="intro">GreenSense is simple and easy to use. Farmers don't need to be tech experts to benefit from it.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Transaction Tracking</h3>
+          <p>Every time a farmer buys something or sells a crop, GreenSense records it. You can log purchases and sales through a mobile phone or computer.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>AI Insights</h3>
+          <p>GreenSense analyzes the data automatically. It looks at all your expenses, sales, and crop performance to calculate profit per crop, cost per plant, and seasonal trends.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Alerts and Suggestions</h3>
+          <p>The platform can send alerts if a crop isn't performing well, if costs are higher than usual, or if a particular crop is very profitable and should be planted more.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Easy-to-Understand Reports</h3>
+          <p>GreenSense creates simple charts and summaries so farmers can see at a glance how their farm is performing. No confusing numbers, no complex formulas—just clear, actionable advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Benefits of Using GreenSense</h2>
+      <p>Using GreenSense has many advantages for small greenhouse farmers:</p>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <span class="checkmark">✓</span>
+          <div>
+            <h3>Save Money</h3>
+            <p>Know exactly where your money is going and which crops give the highest return.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="checkmark">✓</span>
+          <div>
+            <h3>Reduce Waste</h3>
+            <p>Avoid overplanting or unnecessary purchases.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="checkmark">✓</span>
+          <div>
+            <h3>Increase Profits</h3>
+            <p>Make informed decisions about which crops to grow and which markets to target.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="checkmark">✓</span>
+          <div>
+            <h3>Plan Better</h3>
+            <p>Use historical data to predict demand and optimize planting schedules.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="checkmark">✓</span>
+          <div>
+            <h3>Peace of Mind</h3>
+            <p>Let GreenSense watch over your transactions while you focus on farming.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Can Use -->
+  <section class="who-can-use">
+    <div class="container">
+      <h2>Who Can Use GreenSense?</h2>
+      <p>GreenSense is perfect for:</p>
+      <ul class="user-list">
+        <li>Small-scale greenhouse farmers growing vegetables, herbs, mushrooms, or berries.</li>
+        <li>Indoor farm operators and vertical farms.</li>
+        <li>Farmers selling directly to markets, restaurants, or subscription box customers.</li>
+        <li>Anyone who wants to grow smarter, not harder.</li>
+      </ul>
+      <p class="closing-note">Whether you run a backyard greenhouse or a small commercial operation, GreenSense makes farm management simple, effective, and profitable.</p>
+    </div>
+  </section>
+
+  <!-- Why Different -->
+  <section class="why-different">
+    <div class="container">
+      <h2>Why GreenSense is Different</h2>
+      <p>Many tools for farmers are either too complicated or designed for large industrial operations. Spreadsheet tracking is manual and time-consuming. Traditional farm management software is expensive and often too complex for small-scale growers.</p>
+      <p>GreenSense is different because it is:</p>
+      <div class="different-grid">
+        <div class="different-item">
+          <h3>Designed for Small Farms</h3>
+          <p>Easy to use and affordable.</p>
+        </div>
+        <div class="different-item">
+          <h3>Actionable</h3>
+          <p>Focuses on insights farmers can actually use, not just raw data.</p>
+        </div>
+        <div class="different-item">
+          <h3>Smart but Simple</h3>
+          <p>Uses AI to analyze trends without requiring farmers to understand complex math or technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Start -->
+  <section class="how-start">
+    <div class="container">
+      <h2>How Farmers Can Start?</h2>
+      <p>Getting started with GreenSense is easy:</p>
+      <div class="start-steps">
+        <div class="start-step">
+          <div class="start-number">1</div>
+          <p>Sign up on the mobile app or website.</p>
+        </div>
+        <div class="start-step">
+          <div class="start-number">2</div>
+          <p>Start logging your purchases and sales.</p>
+        </div>
+        <div class="start-step">
+          <div class="start-number">3</div>
+          <p>Let GreenSense analyze your data.</p>
+        </div>
+        <div class="start-step">
+          <div class="start-number">4</div>
+          <p>Receive alerts, reports, and advice to improve your farm's performance.</p>
+        </div>
+      </div>
+      <p class="timeline">Within weeks, farmers can see how their crops are performing, which expenses are necessary, and which crops or markets are most profitable.</p>
+    </div>
+  </section>
+
+  <!-- Future -->
+  <section class="future">
+    <div class="container">
+      <h2>The Future with GreenSense</h2>
+      <p>GreenSense is not just a tool—it's a partner for every small greenhouse farmer. By turning everyday transactions into insights, GreenSense helps farmers:</p>
+      <div class="future-benefits">
+        <div class="future-item">Grow healthier crops</div>
+        <div class="future-item">Reduce waste</div>
+        <div class="future-item">Increase profits</div>
+        <div class="future-item">Make better decisions without extra stress</div>
+      </div>
+      <p>GreenSense also plans to expand its platform in the future to include:</p>
+      <ul class="future-features">
+        <li>Integration with small IoT devices for harvest tracking and environmental monitoring</li>
+        <li>Forecasting crop demand based on market trends</li>
+        <li>Personalized recommendations for planting schedules and crop selection</li>
+      </ul>
+      <p class="future-closing">With GreenSense, small-scale farmers can compete with larger farms, make smarter decisions, and achieve more consistent success.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Start Growing Smarter Today</h2>
+      <p>Running a small greenhouse farm is challenging, but technology can help. GreenSense empowers farmers by turning their everyday purchases and sales into actionable insights.</p>
+      <p>Whether you are a small backyard grower or a local commercial farmer, GreenSense makes farming smarter, simpler, and more rewarding.</p>
+      <button class="cta">Sign Up Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>GreenSense</h3>
+          <p>Smart Insights for Small Greenhouse Farmers</p>
+          <div class="social-media">
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>📧 info@greensense.com</li>
+            <li>📞 1-800-GREEN-SENSE</li>
+            <li>📍 123 Farm Tech Ave<br>Agricultural City, AC 12345</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GreenSense. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
