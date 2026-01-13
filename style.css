@@ -584,7 +584,7 @@ footer a:hover {
     padding: 50px 20px; 
   }
 }
-/*DARK-MODE-section*/
+/*DARK-MODE-section-start*/
 body.dark { background-color: #1a1a1a; color: #e0e0e0; }
 body.dark .navbar { background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
 body.dark .theme-toggle { border-color: rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.1); }
@@ -626,3 +626,4 @@ body.dark .cta-final { background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 1
 body.dark footer { background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); }
 body.dark footer a { color: #b0b0b0; }
 body.dark footer a:hover { color: #e0e0e0; }
+/*DARK-MODE-section-end*/
