@@ -11,16 +11,20 @@
   --primary-green-light: #3da372;
   --secondary-green: #4a9d6e;
   --accent-green: #6bc48a;
+  --bright-green: #22c55e;
+  --forest-green: #166534;
+  --mint-green: #d1fae5;
   --light-green: #e8f5e9;
+  --pale-green: #f0fdf4;
   --text-dark: #1a1a1a;
-  --text-medium: #4a4a4a;
-  --text-light: #6b6b6b;
+  --text-medium: #2d4a2d;
+  --text-light: #4a6a4a;
   --bg-white: #ffffff;
-  --bg-light: #f8f9fa;
-  --bg-section: #f0f7f3;
-  --border-color: #e0e0e0;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 16px rgba(45, 134, 89, 0.2);
+  --bg-light: #f0fdf4;
+  --bg-section: #e8f5e9;
+  --border-color: #a7d4a7;
+  --shadow: 0 2px 8px rgba(45, 134, 89, 0.15);
+  --shadow-hover: 0 4px 16px rgba(45, 134, 89, 0.3);
 }
 
 body {
@@ -39,7 +43,7 @@ body {
 
 /* Navigation */
 .navbar {
-  background-color: var(--bg-white);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   padding: 1rem 0;
   box-shadow: var(--shadow);
   position: sticky;
@@ -56,24 +60,25 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-green);
+  color: white;
   letter-spacing: -0.5px;
 }
 
 .cta-nav {
   padding: 10px 24px;
   font-size: 0.95rem;
-  background-color: var(--primary-green);
-  color: white;
+  background-color: white;
+  color: var(--primary-green);
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cta-nav:hover {
-  background-color: var(--primary-green-dark);
+  background-color: var(--mint-green);
   transform: translateY(-1px);
   box-shadow: var(--shadow-hover);
 }
@@ -148,7 +153,7 @@ body {
 /* Problem Section */
 .problem {
   padding: 80px 20px;
-  background-color: var(--bg-light);
+  background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
 }
 
 .problem h2 {
@@ -164,23 +169,25 @@ body {
   max-width: 900px;
   margin: 0 auto 1.5rem;
   line-height: 1.8;
+  font-weight: 500;
 }
 
 .problem .highlight {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 2rem;
-  border-left: 4px solid var(--primary-green);
+  border-left: 5px solid var(--primary-green);
   border-radius: 8px;
   font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--forest-green);
   margin-top: 2rem;
+  box-shadow: var(--shadow);
 }
 
 /* What Is Section */
 .what-is {
   padding: 80px 20px;
-  background-color: var(--bg-white);
+  background-color: var(--bg-section);
 }
 
 .what-is h2 {
@@ -208,13 +215,15 @@ body {
 .feature-list li {
   padding: 1rem 1.5rem;
   margin-bottom: 0.75rem;
-  background-color: var(--bg-section);
-  border-left: 4px solid var(--accent-green);
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
+  border-left: 5px solid var(--primary-green);
+  border-radius: 8px;
   font-size: 1.05rem;
   color: var(--text-dark);
   position: relative;
   padding-left: 2.5rem;
+  box-shadow: var(--shadow);
+  font-weight: 500;
 }
 
 .feature-list li::before {
@@ -226,17 +235,20 @@ body {
 }
 
 .assistant-note {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 1.5rem;
   border-radius: 8px;
   font-style: italic;
   margin-top: 2rem;
+  border: 2px solid var(--accent-green);
+  box-shadow: var(--shadow);
+  font-weight: 500;
 }
 
 /* Features/Highlights Section */
 .features-highlights {
   padding: 80px 20px;
-  background-color: var(--bg-white);
+  background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
 }
 
 .features-highlights h2 {
@@ -264,19 +276,20 @@ body {
 }
 
 .feature-card {
-  background-color: var(--bg-section);
+  background-color: white;
   padding: 2.5rem;
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 3px solid var(--accent-green);
+  box-shadow: var(--shadow);
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: var(--accent-green);
-  background-color: var(--light-green);
+  border-color: var(--primary-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
 }
 
 .feature-icon {
@@ -336,10 +349,10 @@ body {
 }
 
 .mockup-screen {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(45, 134, 89, 0.4);
   max-width: 500px;
   width: 100%;
 }
@@ -389,8 +402,9 @@ body {
   height: 150px;
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: var(--bg-light);
+  background: linear-gradient(180deg, var(--mint-green) 0%, var(--light-green) 100%);
   border-radius: 8px;
+  border: 2px solid var(--accent-green);
 }
 
 .chart-bar {
@@ -415,8 +429,9 @@ body {
 .stat-item {
   text-align: center;
   padding: 1rem;
-  background-color: var(--bg-section);
+  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
   border-radius: 8px;
+  border: 2px solid var(--accent-green);
 }
 
 .stat-label {
@@ -466,12 +481,15 @@ body {
 }
 
 .visual-note {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid var(--primary-green);
+  border-left: 5px solid var(--primary-green);
   font-style: italic;
   margin-top: 1.5rem;
+  border: 2px solid var(--accent-green);
+  box-shadow: var(--shadow);
+  font-weight: 500;
 }
 
 /* Why Need Section */
@@ -503,12 +521,13 @@ body {
 }
 
 .problem-card {
-  background-color: var(--bg-white);
+  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
-  border-top: 4px solid var(--primary-green);
+  border-top: 5px solid var(--primary-green);
+  border: 3px solid var(--accent-green);
 }
 
 .problem-card:hover {
@@ -530,23 +549,25 @@ body {
 }
 
 .solution-note {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--forest-green);
   margin-top: 3rem;
   text-align: center;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  border: 3px solid var(--primary-green);
+  box-shadow: var(--shadow-hover);
 }
 
 /* How Works Section */
 .how-works {
   padding: 80px 20px;
-  background-color: var(--bg-white);
+  background: linear-gradient(180deg, var(--pale-green) 0%, var(--light-green) 100%);
 }
 
 .how-works h2 {
@@ -633,7 +654,7 @@ body {
 }
 
 .benefit-item {
-  background-color: var(--bg-white);
+  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -641,6 +662,7 @@ body {
   gap: 1.5rem;
   align-items: flex-start;
   transition: all 0.3s ease;
+  border: 2px solid var(--accent-green);
 }
 
 .benefit-item:hover {
@@ -678,7 +700,7 @@ body {
 /* Who Can Use Section */
 .who-can-use {
   padding: 80px 20px;
-  background-color: var(--bg-white);
+  background-color: var(--bg-section);
 }
 
 .who-can-use h2 {
@@ -706,13 +728,14 @@ body {
 .user-list li {
   padding: 1.25rem 2rem;
   margin-bottom: 1rem;
-  background-color: var(--bg-section);
-  border-left: 4px solid var(--primary-green);
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
+  border-left: 5px solid var(--primary-green);
+  border-radius: 8px;
   font-size: 1.05rem;
   color: var(--text-dark);
   position: relative;
   padding-left: 3rem;
+  box-shadow: var(--shadow);
 }
 
 .user-list li::before {
@@ -723,23 +746,25 @@ body {
 }
 
 .closing-note {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--forest-green);
   margin-top: 3rem;
   text-align: center;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  border: 3px solid var(--primary-green);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Why Different Section */
 .why-different {
   padding: 80px 20px;
-  background-color: var(--bg-section);
+  background: linear-gradient(180deg, var(--light-green) 0%, var(--pale-green) 100%);
 }
 
 .why-different h2 {
@@ -768,13 +793,14 @@ body {
 }
 
 .different-item {
-  background-color: var(--bg-white);
+  background: linear-gradient(135deg, white 0%, var(--mint-green) 100%);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   text-align: center;
   transition: all 0.3s ease;
-  border-top: 4px solid var(--accent-green);
+  border-top: 5px solid var(--primary-green);
+  border: 3px solid var(--accent-green);
 }
 
 .different-item:hover {
@@ -798,7 +824,7 @@ body {
 /* How Start Section */
 .how-start {
   padding: 80px 20px;
-  background-color: var(--bg-white);
+  background-color: var(--bg-section);
 }
 
 .how-start h2 {
@@ -829,14 +855,17 @@ body {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
-  background-color: var(--bg-section);
+  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
   border-radius: 12px;
   transition: all 0.3s ease;
+  border: 2px solid var(--accent-green);
+  box-shadow: var(--shadow);
 }
 
 .start-step:hover {
-  background-color: var(--light-green);
+  background: linear-gradient(90deg, var(--accent-green) 0%, var(--mint-green) 100%);
   transform: translateX(5px);
+  border-color: var(--primary-green);
 }
 
 .start-number {
@@ -862,15 +891,17 @@ body {
 }
 
 .timeline {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--forest-green);
   text-align: center;
   max-width: 900px;
   margin: 3rem auto 0;
+  border: 3px solid var(--primary-green);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Future Section */
@@ -903,14 +934,15 @@ body {
 }
 
 .future-item {
-  background-color: var(--bg-white);
+  background: linear-gradient(135deg, var(--mint-green) 0%, white 100%);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
   font-weight: 600;
-  color: var(--primary-green);
+  color: var(--forest-green);
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
+  border: 2px solid var(--accent-green);
 }
 
 .future-item:hover {
@@ -928,13 +960,15 @@ body {
 .future-features li {
   padding: 1rem 1.5rem;
   margin-bottom: 0.75rem;
-  background-color: var(--bg-white);
-  border-left: 4px solid var(--primary-green);
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--mint-green) 0%, white 100%);
+  border-left: 5px solid var(--primary-green);
+  border-radius: 8px;
   font-size: 1.05rem;
   color: var(--text-dark);
   position: relative;
   padding-left: 2.5rem;
+  box-shadow: var(--shadow);
+  font-weight: 500;
 }
 
 .future-features li::before {
@@ -945,17 +979,19 @@ body {
 }
 
 .future-closing {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--mint-green) 0%, var(--light-green) 100%);
   padding: 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--forest-green);
   margin-top: 3rem;
   text-align: center;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  border: 3px solid var(--primary-green);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Final CTA Section */
@@ -994,7 +1030,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: var(--text-dark);
+  background: linear-gradient(135deg, var(--forest-green) 0%, var(--primary-green-dark) 100%);
   color: white;
   padding: 4rem 20px 2rem;
 }
@@ -1050,9 +1086,9 @@ footer {
 }
 
 .social-icon:hover {
-  background-color: var(--primary-green);
+  background-color: var(--accent-green);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(107, 196, 138, 0.3);
+  box-shadow: 0 4px 12px rgba(107, 196, 138, 0.5);
 }
 
 .footer-links {
