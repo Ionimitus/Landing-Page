@@ -57,6 +57,39 @@ body {
   align-items: center;
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.theme-toggle span {
+  display: block;
+  line-height: 1;
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -1257,4 +1290,439 @@ footer {
   .cta-final {
     padding: 60px 20px;
   }
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .navbar {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .logo {
+  color: #e0e0e0;
+}
+
+body.dark .cta-nav {
+  background-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+body.dark .cta-nav:hover {
+  background-color: #5a5a5a;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+body.dark .problem {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+body.dark .problem h2 {
+  color: #a0a0a0;
+}
+
+body.dark .problem p {
+  color: #c0c0c0;
+}
+
+body.dark .problem .highlight {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  color: #e0e0e0;
+  border-left-color: #6a6a6a;
+}
+
+body.dark .what-is {
+  background-color: #1f1f1f;
+}
+
+body.dark .what-is h2 {
+  color: #a0a0a0;
+}
+
+body.dark .what-is p {
+  color: #c0c0c0;
+}
+
+body.dark .feature-list li {
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
+  color: #e0e0e0;
+  border-left-color: #6a6a6a;
+}
+
+body.dark .assistant-note {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .features-highlights {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+body.dark .features-highlights h2 {
+  color: #a0a0a0;
+}
+
+body.dark .section-intro {
+  color: #c0c0c0;
+}
+
+body.dark .feature-card {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #e0e0e0;
+}
+
+body.dark .feature-card:hover {
+  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+  border-color: #6a6a6a;
+}
+
+body.dark .feature-card h3 {
+  color: #b0b0b0;
+}
+
+body.dark .feature-card p {
+  color: #d0d0d0;
+}
+
+body.dark .visual {
+  background-color: #1f1f1f;
+}
+
+body.dark .visual h2 {
+  color: #a0a0a0;
+}
+
+body.dark .visual-intro {
+  color: #c0c0c0;
+}
+
+body.dark .mockup-screen {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+}
+
+body.dark .mockup-body {
+  background-color: #2a2a2a;
+}
+
+body.dark .mockup-chart {
+  background: linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+}
+
+body.dark .chart-bar {
+  background: linear-gradient(180deg, #5a5a5a, #4a4a4a);
+}
+
+body.dark .stat-item {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+}
+
+body.dark .stat-label {
+  color: #b0b0b0;
+}
+
+body.dark .stat-value {
+  color: #d0d0d0;
+}
+
+body.dark .visual-description h3 {
+  color: #a0a0a0;
+}
+
+body.dark .visual-description p {
+  color: #c0c0c0;
+}
+
+body.dark .visual-features li {
+  color: #e0e0e0;
+  border-bottom-color: #4a4a4a;
+}
+
+body.dark .visual-note {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .why-need {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+body.dark .why-need h2 {
+  color: #a0a0a0;
+}
+
+body.dark .why-need > p {
+  color: #c0c0c0;
+}
+
+body.dark .problem-card {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #e0e0e0;
+}
+
+body.dark .problem-card h3 {
+  color: #b0b0b0;
+}
+
+body.dark .problem-card p {
+  color: #d0d0d0;
+}
+
+body.dark .solution-note {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .how-works {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+body.dark .how-works h2 {
+  color: #a0a0a0;
+}
+
+body.dark .how-works .intro {
+  color: #c0c0c0;
+}
+
+body.dark .step h3 {
+  color: #b0b0b0;
+}
+
+body.dark .step p {
+  color: #d0d0d0;
+}
+
+body.dark .step-number {
+  background: linear-gradient(135deg, #5a5a5a, #4a4a4a);
+}
+
+body.dark .benefits {
+  background-color: #1f1f1f;
+}
+
+body.dark .benefits h2 {
+  color: #a0a0a0;
+}
+
+body.dark .benefits > p {
+  color: #c0c0c0;
+}
+
+body.dark .benefit-item {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #e0e0e0;
+}
+
+body.dark .benefit-item h3 {
+  color: #b0b0b0;
+}
+
+body.dark .benefit-item p {
+  color: #d0d0d0;
+}
+
+body.dark .checkmark {
+  background-color: #6a6a6a;
+}
+
+body.dark .who-can-use {
+  background-color: #1f1f1f;
+}
+
+body.dark .who-can-use h2 {
+  color: #a0a0a0;
+}
+
+body.dark .who-can-use > p {
+  color: #c0c0c0;
+}
+
+body.dark .user-list li {
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-left-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .closing-note {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .why-different {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+body.dark .why-different h2 {
+  color: #a0a0a0;
+}
+
+body.dark .why-different > p {
+  color: #c0c0c0;
+}
+
+body.dark .different-item {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #e0e0e0;
+}
+
+body.dark .different-item h3 {
+  color: #b0b0b0;
+}
+
+body.dark .different-item p {
+  color: #d0d0d0;
+}
+
+body.dark .how-start {
+  background-color: #1f1f1f;
+}
+
+body.dark .how-start h2 {
+  color: #a0a0a0;
+}
+
+body.dark .how-start > p {
+  color: #c0c0c0;
+}
+
+body.dark .start-step {
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #e0e0e0;
+}
+
+body.dark .start-step:hover {
+  background: linear-gradient(90deg, #4a4a4a 0%, #3a3a3a 100%);
+  border-color: #6a6a6a;
+}
+
+body.dark .start-step p {
+  color: #e0e0e0;
+}
+
+body.dark .start-number {
+  background-color: #5a5a5a;
+}
+
+body.dark .timeline {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .future {
+  background-color: #1f1f1f;
+}
+
+body.dark .future h2 {
+  color: #a0a0a0;
+}
+
+body.dark .future > p {
+  color: #c0c0c0;
+}
+
+body.dark .future-item {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #5a5a5a;
+  color: #d0d0d0;
+}
+
+body.dark .future-features li {
+  background: linear-gradient(90deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-left-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .future-closing {
+  background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-color: #6a6a6a;
+  color: #e0e0e0;
+}
+
+body.dark .cta-final {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+body.dark .cta-final .cta {
+  background-color: #4a4a4a;
+  color: #e0e0e0;
+}
+
+body.dark .cta-final .cta:hover {
+  background-color: #5a5a5a;
+}
+
+body.dark footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+body.dark .footer-section h3 {
+  color: #b0b0b0;
+}
+
+body.dark .footer-section h4 {
+  color: #d0d0d0;
+}
+
+body.dark .footer-section p {
+  color: #c0c0c0;
+}
+
+body.dark .footer-links a {
+  color: #c0c0c0;
+}
+
+body.dark .footer-links a:hover {
+  color: #e0e0e0;
+}
+
+body.dark .footer-contact li {
+  color: #c0c0c0;
+}
+
+body.dark .footer-bottom p {
+  color: #c0c0c0;
+}
+
+body.dark .footer-legal a {
+  color: #c0c0c0;
+}
+
+body.dark .footer-legal a:hover {
+  color: #e0e0e0;
+}
+
+body.dark .social-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
