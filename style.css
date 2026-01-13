@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +8,8 @@
 :root {
   --primary-green: #2d8659;
   --primary-green-dark: #1f5d3f;
-  --primary-green-light: #3da372;
   --secondary-green: #4a9d6e;
   --accent-green: #6bc48a;
-  --bright-green: #22c55e;
   --forest-green: #166534;
   --mint-green: #d1fae5;
   --light-green: #e8f5e9;
@@ -26,7 +24,6 @@
   --shadow: 0 2px 8px rgba(45, 134, 89, 0.15);
   --shadow-hover: 0 4px 16px rgba(45, 134, 89, 0.3);
 }
-
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.7;
@@ -34,14 +31,11 @@ body {
   background-color: var(--bg-white);
   font-size: 16px;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* Navigation */
 .navbar {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
   padding: 1rem 0;
